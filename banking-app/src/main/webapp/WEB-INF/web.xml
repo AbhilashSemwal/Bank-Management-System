@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>banking-app</display-name>
+  <!--  Mapping home page -->
+  <welcome-file-list>
+	<welcome-file>/templates/home/home.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- Mapping login form -->
+  <servlet>
+   	<servlet-name>loginForm</servlet-name>
+   	<jsp-file>/templates/user/login/login-form.jsp</jsp-file>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>loginForm</servlet-name>
+  	<url-pattern>/user/login-form</url-pattern>
+  </servlet-mapping>
+  <!-- Mapping registration form -->
+  <servlet>
+   	<servlet-name>registrationForm</servlet-name>
+   	<jsp-file>/templates/user/registration/registration-form.jsp</jsp-file>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>registrationForm</servlet-name>
+  	<url-pattern>/user/registration</url-pattern>
+  </servlet-mapping>
+  <!-- Mapping register user page -->
+  <servlet>
+   	<servlet-name>registerUser</servlet-name>
+   	<jsp-file>/templates/user/registration/register-user.jsp</jsp-file>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>registerUser</servlet-name>
+  	<url-pattern>/user/registration.do</url-pattern>
+  </servlet-mapping>
+  <!-- Mapping authenticate user page -->
+  <servlet>
+   	<servlet-name>authenticateUser</servlet-name>
+   	<jsp-file>/templates/user/login/authenticate-user.jsp</jsp-file>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>authenticateUser</servlet-name>
+  	<url-pattern>/user/authenticate.do</url-pattern>
+  </servlet-mapping>
+</web-app>
